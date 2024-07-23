@@ -67,7 +67,7 @@ function Home() {
         <h2 className='p-8' id='contact'>Contact</h2>
         <div className='w-screen -ml-9 left-0 h-16'>
           <ul className='flex justify-center align-middle'>
-            <a href='mailto:noahmartineau8@gmail.com' target="_blank" rel="noopener noreferrer"><li className='pl-4 pr-4 p-2 mt-2 list-none hover-underline-animation'>
+            <a href='mailto:me@noahmartineau.com' target="_blank" rel="noopener noreferrer"><li className='pl-4 pr-4 p-2 mt-2 list-none hover-underline-animation'>
               <EmailIcon />
             </li></a>
             <a href='https://github.com/sp-ec' target="_blank" rel="noopener noreferrer"><li className='pl-4 pr-4 p-2 mt-2 list-none hover-underline-animation'>
