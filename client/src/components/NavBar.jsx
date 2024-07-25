@@ -3,18 +3,26 @@ import { useState, useEffect } from 'react'
 
 const NavBar = () => {
 
+    const handleScroll = () => {
+        setScrollHeight(window.scrollY)
+        if (scrollHeight < 560) {
+            document.getElementById('navigation').classList.add('navAtTop')
+            
+        } else {
+            document.getElementById('navigation').classList.remove('navAtTop')
+        }
+    }
+
     const [scrollHeight, setScrollHeight] = useState([{}])
 
     useEffect(() => {
+        handleScroll()
         window.addEventListener('scroll', () => {
-            setScrollHeight(window.scrollY)
-            if (scrollHeight < 560) {
-                document.getElementById('navigation').classList.add('navAtTop')
-                
-            } else {
-                document.getElementById('navigation').classList.remove('navAtTop')
-            }
+            handleScroll()
         }, { passive: true })
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
     })  
 
     return (

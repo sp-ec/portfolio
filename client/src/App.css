@@ -103,9 +103,32 @@ a:hover {
   top: 560px;
 }
 
+.scroll-fade-in {
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  opacity: 1;
+}
+
+.scroll-fade-in-delay-250 {
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
+.scroll-fade-in-delay-500 {
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.scroll-fade-out {
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  transform: translateY(5vh);
+  opacity: 0;
+}
+
 .blue-bg {
   background-color: #3b4bd9;
-  background: linear-gradient(45deg, #3b4bd9 0%, #202fad 100%);
+  background: linear-gradient(45deg, #3b4bd9 0%, #202eadaf 100%);
   margin-top: 4rem;
   padding: 2rem;
   padding-bottom: 4rem;

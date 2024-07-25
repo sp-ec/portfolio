@@ -22,7 +22,8 @@ const Github = () => {
     }, [])
 
     return (
-        <div className='mt-2'>
+        <div className=' bg-zinc-900 m-4 p-6 h-52'>
+            <h3 className='mb-4'>Github</h3>
             {(typeof user.id != 'undefined') ? (
                 <div>
                     <div className='flex-row flex max-h-30'>

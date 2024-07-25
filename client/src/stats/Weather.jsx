@@ -15,7 +15,8 @@ const Weather = () => {
     }, [])
 
     return (
-        <div className='mt-2'>
+        <div className=' bg-zinc-900 m-4 p-6  h-52'>
+            <h3 className='mb-4'>Weather (D.C.)</h3>
             {(typeof weather.name != 'undefined') ? (
                 <div>
                     <div className='flex-row flex max-h-30'>
