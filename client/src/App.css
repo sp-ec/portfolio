@@ -6,11 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('fonts/JetBrainsMono/JetBrainsMono-Regular.woff2') format('truetype');
-}
-
-@font-face {
   font-family: 'Work Sans';
   src: url('fonts/WorkSans/WorkSans-Regular.ttf') format('truetype');
 }
@@ -101,6 +96,11 @@ a:hover {
 
 .headerLink {
   font-size: 1.2rem;
+}
+
+.navAtTop {
+  position: absolute;
+  top: 560px;
 }
 
 .blue-bg {
