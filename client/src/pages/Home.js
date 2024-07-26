@@ -14,11 +14,6 @@ import { useInView } from 'react-intersection-observer'
 
 function Home() {
 
-  const { ref: aboutMe, inView: aboutMeVisible } = useInView({
-    threshold: 0.75,
-    triggerOnce: true
-  });
-
   const { ref: projects1, inView: projects1Visible } = useInView({
     threshold: 0.75,
     triggerOnce: true
@@ -53,12 +48,10 @@ function Home() {
         <p>My name is Noah, I'm a programmer and game developer. This is where I'll be posting about my projects and providing a window into my life.
           Feel free to look around, and dont be afraid to contact me if you have any questions.</p>
 
-        <div className={aboutMeVisible ? 'scroll-fade-in' : 'scroll-fade-out'} ref={aboutMe}>
-          <h2 className='p-8'>About Me</h2>
-          <p>I live near Washington D.C., USA and attend a local college. I'm currently pursuing a bachelor's in Computer Science with plans to get a master's in the future.</p>
-          <p className='mt-8'>I've used many languages, but I primarily use C# for game development and Javascript for web development.</p>
-          <p className='mt-8 mb-8'>When I'm not programming, I'm usually hanging out with my friends, travelling, practicing bass guitar or finding new indie games to play.</p>
-        </div>
+        <h2 className='p-8'>About Me</h2>
+        <p>I live near Washington D.C., USA and attend a local college. I'm currently pursuing a bachelor's in Computer Science with plans to get a master's in the future.</p>
+        <p className='mt-8'>I've used many languages, but I primarily use C# for game development and Javascript for web development.</p>
+        <p className='mt-8 mb-8'>When I'm not programming, I'm usually hanging out with my friends, travelling, practicing bass guitar or finding new indie games to play.</p>
 
       </div>
 
@@ -82,19 +75,19 @@ function Home() {
 
         <div className='flex row flex-wrap justify-around'>
 
-          <div className='basis-1/4 flex-grow'>
+          <div className='basis-1/4 flex-grow order-3'>
             <div className={stats1Visible ? 'scroll-fade-in' : 'scroll-fade-out'} ref={stats1}>
               <LastPlayedSong />
             </div>
           </div>
 
-          <div className='basis-1/3 flex-grow'>
+          <div className='basis-1/3 flex-grow order-3'>
             <div className={stats2Visible ? 'scroll-fade-in-delay-250' : 'scroll-fade-out'} ref={stats2}>
               <Github />
             </div>
           </div>
 
-          <div className='basis-1/4 flex-grow'>
+          <div className='basis-1/4 flex-grow order-2'>
             <div className={stats3Visible ? 'scroll-fade-in-delay-500' : 'scroll-fade-out'} ref={stats3}>
               <Weather />
             </div>

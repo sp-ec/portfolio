@@ -189,16 +189,8 @@ p {
 }
 
 @media (max-width: 1080px) {
-  #contact-bar {
+  #nav-long {
     display: none;
-  }
-
-  #text-nav {
-    display: none;
-  }
-
-  #dropdown-container {
-    margin-left: auto;
   }
 }
 

@@ -5,34 +5,26 @@ const app = express()
 const LASTFM_API_KEY = require('./keys.json').LASTFM_API_KEY;
 const GITHUB_TOKEN = require('./keys.json').GITHUB_TOKEN;
 
-app.get("/music/lastplayed", (req, res) => {
-    (async () => {
-        data = await fetchLastPlayed();
-        res.json(data)
-    })();
+let forecastData;
+let githubUserData;
+let githubReposData;
+let musicData;
 
+app.get("/music/lastplayed", (req, res) => {
+    res.json(musicData)
 })
 
 app.get("/weather/forecast", (req, res) => {
-    (async () => {
-        data = await fetchWeather();
-        res.json(data)
-    })();
+    res.json(forecastData)
 
 })
 
 app.get("/github/user", (req, res) => {
-    (async () => {
-        const data = await fetchGithubUser();
-        res.json(data)
-    })();
+    res.json(githubUserData)
 })
 
 app.get("/github/repos", (req, res) => {
-    (async () => {
-        const data = await fetchGithubRepos();
-        res.json(data)
-    })();
+    res.json(githubReposData)
 })
 
 app.listen(5000, () => {
@@ -90,3 +82,16 @@ const fetchGithubRepos = async () => {
     console.log('Github repos fetched:', data)
     return data;
 }
+
+fetchAPIData = async () => {
+    forecastData = await fetchWeather();
+    githubUserData = await fetchGithubUser();
+    githubReposData = await fetchGithubRepos();
+    musicData = await fetchLastPlayed();
+}
+
+fetchAPIData();
+
+setInterval(function () {
+    fetchAPIData();
+}, 900000)

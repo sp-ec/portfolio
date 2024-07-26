@@ -1,4 +1,5 @@
 import React, { Component, useEffect, useState } from 'react'
+import RainCloud from '../icons/RainCloud';
 
 const Weather = () => {
 
@@ -15,18 +16,15 @@ const Weather = () => {
     }, [])
 
     return (
-        <div className=' bg-zinc-900 m-4 p-6  h-52'>
+        <div className=' bg-zinc-900 m-4 p-6 h-52'>
             <h3 className='mb-4'>Weather (D.C.)</h3>
             {(typeof weather.name != 'undefined') ? (
                 <div>
-                    <div className='flex-row flex max-h-30'>
-                        <a href='https://forecast.weather.gov/MapClick.php?lat=38.890370000000075&lon=-77.03195999999997' target="_blank" rel="noopener noreferrer">
-                            <img src={weather.icon} alt='Weather Image' className="min-w-20 h-20" />
-                        </a>
-                        <div className='ml-3'>
-                            <p className='stat-h1 leading-5 mt-1 text-xl'>{weather.temperature}° F</p>
-                            <p className='stat-h2 text-xs opacity-70 mt-1'>{weather.shortForecast}</p>
-                            <p className='stat-h2 text-xs opacity-70 mt-1 max-h-4'>Wind Speed: {weather.windSpeed}</p>
+                    <div className='max-h-30 min-w-56'>
+                        <p className='leading-67 mt-1 text-xl line-clamp-2'>{weather.temperature}° F - {weather.shortForecast}</p>
+                        <div className='mt-4 flex-row flex'>
+                            <RainCloud />
+                            <p className='text-lg opacity-40 ml-2'>{weather.probabilityOfPrecipitation.value != null ? weather.probabilityOfPrecipitation.value : '0'}%</p>
                         </div>
                     </div>
                 </div>

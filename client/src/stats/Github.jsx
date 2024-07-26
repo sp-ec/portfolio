@@ -26,7 +26,7 @@ const Github = () => {
             <h3 className='mb-4'>Github</h3>
             {(typeof user.id != 'undefined') ? (
                 <div>
-                    <div className='flex-row flex max-h-30'>
+                    <div className='flex-row flex max-h-30 min-w-56'>
                         <a href={user.html_url} target="_blank" rel="noopener noreferrer">
                             <img src={user.avatar_url} alt='Github Avatar' className="min-w-20 h-20" />
                         </a>

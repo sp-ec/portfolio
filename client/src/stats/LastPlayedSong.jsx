@@ -22,17 +22,16 @@ const LastPlayedSong = () => {
             <h3 className='mb-4'>Recent Listening</h3>
             {(typeof song.name != 'undefined') ? (
                 <div>
-                    <div className='flex-row flex max-h-30'>
+                    <div className='flex-row flex max-h-30 min-w-56'>
                         <a href={song.url} target="_blank" rel="noopener noreferrer">
                             <img src={song.image[3]['#text']} alt='Album Art' className="min-w-20 h-20" />
                         </a>
                         <div className='ml-3'>
-                            <p className='stat-h1 leading-7 mt-1 text-xl'>{song.artist['#text']}</p>
-                            <p className='text-xs opacity-70 mt-1 overflow-hidden overflow-ellipsis line-clamp-1'>{song.name}</p>
+                            <p className='text-lg leading-7 mt-1 line-clamp-3'>{song.artist['#text']} - {song.name}</p>
                         </div>
                     </div>
                     {(typeof song.date == 'undefined') ? (
-                        <div className='flex-row flex place-items-center mt-5'>
+                        <div className='flex-row flex place-items-center mt-3'>
                             <img src={require('../photos/vinyl.png')} className='w-5 animate-spin'></img>
                             <p className='text-xs opacity-40 ml-2'>Currently Listening</p>
                         </div>
