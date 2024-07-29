@@ -18,7 +18,7 @@ const LastPlayedSong = () => {
     }, [])
 
     return (
-        <div className=' bg-zinc-900 m-4 p-6 h-52'>
+        <div className=' bg-zinc-900 m-4 p-6 h-64'>
             <h3 className='mb-4'>Recent Listening</h3>
             {(typeof song.name != 'undefined') ? (
                 <div>
@@ -31,12 +31,12 @@ const LastPlayedSong = () => {
                         </div>
                     </div>
                     {(typeof song.date == 'undefined') ? (
-                        <div className='flex-row flex place-items-center mt-3'>
+                        <div className='flex-row flex place-items-center mt-5'>
                             <img src={require('../photos/vinyl.png')} className='w-5 animate-spin'></img>
                             <p className='text-xs opacity-40 ml-2'>Currently Listening</p>
                         </div>
                     ) : (
-                        <div className='flex-row flex place-items-center mt-3'>
+                        <div className='flex-row flex place-items-center mt-5'>
                             <img src={require('../photos/vinyl.png')} className='w-5'></img>
                             {(seconds < 3600) ? (
                                 <p className='text-xs opacity-40 ml-2'>Played {Math.floor(seconds / 60)} minute(s) ago</p>

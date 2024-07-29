@@ -22,7 +22,7 @@ const Github = () => {
     }, [])
 
     return (
-        <div className=' bg-zinc-900 m-4 p-6 h-52'>
+        <div className=' bg-zinc-900 m-4 p-6 h-64'>
             <h3 className='mb-4'>Github</h3>
             {(typeof user.id != 'undefined') ? (
                 <div>
