@@ -7,6 +7,8 @@ import Weather from '../stats/Weather.jsx'
 import LinkedinIcon from '../icons/LinkedinIcon.jsx'
 import Github from '../stats/Github.jsx'
 import NavBar from '../components/NavBar'
+import UnityIcon from '../icons/UnityIcon'
+import CSharpIcon from '../icons/CSharpIcon.jsx'
 
 import { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
@@ -53,10 +55,10 @@ function Home() {
         <div className='text-container'>
           <h2 className='p-8'>Projects</h2>
           <div className={projects1Visible ? 'slide-left-in' : 'slide-left-out'} ref={projects1}>
-            <div className='flex flex-row flex-wrap mt-8 mb-8'>
+            <div className='flex flex-row flex-wrap mt-16 mb-8'>
 
               <div className='basis-1/3 flex-grow  mr-8 ml-8 mb-16 flex justify-center min-w-96  h-fit shadow-2xl'>
-                <a href='https://claireecho.itch.io/bit-keeper' target="_blank" rel="noopener noreferrer">
+                <a href='https://claireecho.itch.io/bit-keeper' target="_blank" rel="noopener noreferrer" className={projects1Visible ? 'project-box-shadow-on' : 'project-box-shadow-off'} ref={projects1}>
                   <AutoplayVideo
                     src="videos/BitKeeper.mp4"
                     posterImg="bitkeeper-fallback.png"
@@ -71,7 +73,14 @@ function Home() {
 
               <div className='basis-1/3 flex-grow mr-8 ml-8'>
                 <h3 className='pb-4'>Bit Keeper</h3>
-                <p>I made this small game along with a teammate for a 36-hour hackathon at my university. This was my first ever completed game, and while I wish I had time to expand upon it, I am happy with the final result.</p>
+                <p>
+                  I made this small game along with a teammate for a 36-hour hackathon at my university.
+                  This was my first ever completed game, and while I wish I had time to expand upon it, I am happy with the final result.
+                </p>
+                <div className='mt-4 flex flex-row'>
+                  <UnityIcon />
+                  <CSharpIcon />
+                </div>
               </div>
 
             </div>

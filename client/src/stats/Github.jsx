@@ -34,16 +34,16 @@ const Github = () => {
                             <p className='stat-h1 leading-7 mt-1 text-xl'>{user.public_repos} Public Repositories</p>
                             <div className='flex flex-row justify-start flex-wrap max-w-80 max-h-14 overflow-hidden'>
                                 <div className='mr-2'>
-                                    {repos[0] != null ? <p className='stat-h2 text-xs opacity-70 mt-1 text-nowrap'><a href={repos[0].html_url} target="_blank" rel="noopener noreferrer" className='hover-underline-animation text-blue-400 bg-black p-1'>{repos[0].name}</a></p> : null}
+                                    {repos[0] != null ? <p className='stat-h2 text-xs opacity-70 mt-1 text-nowrap'><a href={repos[0].html_url} target="_blank" rel="noopener noreferrer" className='hover-underline-animation text-accent-pink bg-black p-1'>{repos[0].name}</a></p> : null}
                                 </div>
                                 <div className='mr-2'>
-                                    {repos[1] != null ? <p className='stat-h2 text-xs opacity-70 mt-1 text-nowrap'><a href={repos[1].html_url} target="_blank" rel="noopener noreferrer" className='hover-underline-animation text-blue-400 bg-black p-1'>{repos[1].name}</a></p> : null}
+                                    {repos[1] != null ? <p className='stat-h2 text-xs opacity-70 mt-1 text-nowrap'><a href={repos[1].html_url} target="_blank" rel="noopener noreferrer" className='hover-underline-animation text-accent-pink bg-black p-1'>{repos[1].name}</a></p> : null}
                                 </div>
                                 <div className='mr-2'>
-                                    {repos[2] != null ? <p className='stat-h2 text-xs opacity-70 mt-1 text-nowrap'><a href={repos[2].html_url} target="_blank" rel="noopener noreferrer" className='hover-underline-animation text-blue-400 bg-black p-1'>{repos[2].name}</a></p> : null}
+                                    {repos[2] != null ? <p className='stat-h2 text-xs opacity-70 mt-1 text-nowrap'><a href={repos[2].html_url} target="_blank" rel="noopener noreferrer" className='hover-underline-animation text-accent-pink bg-black p-1'>{repos[2].name}</a></p> : null}
                                 </div>
                                 <div className='mr-2'>
-                                    {repos[3] != null ? <p className='stat-h2 text-xs opacity-70 mt-1 text-nowrap'><a href={repos[3].html_url} target="_blank" rel="noopener noreferrer" className='hover-underline-animation text-blue-400 bg-black p-1'>{repos[3].name}</a></p> : null}
+                                    {repos[3] != null ? <p className='stat-h2 text-xs opacity-70 mt-1 text-nowrap'><a href={repos[3].html_url} target="_blank" rel="noopener noreferrer" className='hover-underline-animation text-accent-pink bg-black p-1'>{repos[3].name}</a></p> : null}
                                 </div>
                             </div>
                         </div>
