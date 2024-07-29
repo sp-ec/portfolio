@@ -18,8 +18,8 @@ const LastPlayedSong = () => {
     }, [])
 
     return (
-        <div className=' bg-zinc-900 m-4 p-6 h-64'>
-            <h3 className='mb-4'>Recent Listening</h3>
+        <div className='bg-accent-green bg-opacity-0  m-4 p-6 h-64'>
+            <h3 className='mb-4 pink-green-title text-lg'>Recent Listening</h3>
             {(typeof song.name != 'undefined') ? (
                 <div>
                     <div className='flex-row flex max-h-30 min-w-56'>
@@ -27,7 +27,7 @@ const LastPlayedSong = () => {
                             <img src={song.image[3]['#text']} alt='Album Art' className="min-w-20 h-20" />
                         </a>
                         <div className='ml-3'>
-                            <p className='text-lg leading-7 mt-1 line-clamp-3'>{song.artist['#text']} - {song.name}</p>
+                            <p className='text-lg leading-7 mt-1 line-clamp-3 text-accent-green'>{song.artist['#text']} - {song.name}</p>
                         </div>
                     </div>
                     {(typeof song.date == 'undefined') ? (

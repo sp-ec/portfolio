@@ -12,7 +12,7 @@ function UnityIcon() {
         >
             <defs>
                 <linearGradient id="gradient" gradientTransform="rotate(25)">
-                    <stop offset="25%" stopColor="#d9c93b" />
+                    <stop offset="25%" stopColor="#3BD97A" />
                     <stop offset="100%" stopColor="#D93B9A" />
                 </linearGradient>
             </defs>

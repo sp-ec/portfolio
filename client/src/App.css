@@ -24,6 +24,7 @@
 
   color: rgba(255, 255, 255, 0.75);
   background-color: #27272a;
+  background: linear-gradient(165deg, #3BD97A -50%, #18181b 40%, #18181b 60%, #D93B9A 200%);
   scroll-behavior: smooth;
 }
 
@@ -53,13 +54,12 @@ h3 {
 a {
   fill: #ffffff;
   text-decoration: none;
-  transition: color 0.1s ease-in;
+  transition: color 0.1s ease-in, fill 0.1s ease-in;
 }
 
 a:hover {
   fill: #ffffff;
-  transition: color 0.1s ease-in;
-  transition: fill 0.1s ease-in;
+  transition: color 0.1s ease-in, fill 0.1s ease-in;
   opacity: 1;
 }
 
@@ -100,8 +100,16 @@ a:hover {
 
 .navAtTop {
   position: absolute;
-  top: 560px;
+  top: 598px;
+  background-color: #18181B80;
+  transition: background-color 0.25s;
 }
+
+.navMoving {
+  transition: background-color 0.25s;
+  background-color: #18181b60;
+}
+
 
 .scroll-fade-in {
   transition: opacity 0.5s ease-in, transform 0.5s ease-in-out;
@@ -143,9 +151,8 @@ a:hover {
   opacity: 0;
 }
 
-.blue-bg {
-  background-color: #3b4bd9;
-  background: linear-gradient(125deg, #3b4bd9 0%, #202eadaf 100%);
+.dark-bg {
+  background-color: #0000003f;
   margin-top: 4rem;
   padding: 2rem;
   padding-bottom: 4rem;
@@ -154,13 +161,13 @@ a:hover {
 }
 
 .project-box-shadow-on {
-  box-shadow: -10px -10px 0px 0px #d9c93b, -20px -20px 0px 0px #D93B9A;
+  box-shadow: -10px -10px 0px 0px #3BD97A, -20px -20px 0px 0px #D93B9A;
   transition: box-shadow 0.5s;
   transition-delay: 750ms;
 }
 
 .project-box-shadow-off {
-  box-shadow: 0px 0px 0px 0px #d9c93b, 0px 0px 0px 0px #D93B9A;
+  box-shadow: 0px 0px 0px 0px #3BD97A, 0px 0px 0px 0px #D93B9A;
   transition: box-shadow 0.5s;
 }
 
@@ -187,6 +194,14 @@ p {
 
 .hide-bullet {
   list-style: none;
+}
+
+.pink-green-title {
+  box-shadow: -2px -2px 0px 0px #3BD97A, 2px 2px 0px 0px #D93B9A;
+  box-sizing: calc(100% - 20px);
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  display: inline-block
 }
 
 @media (max-width: 1080px) {

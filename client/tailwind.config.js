@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'accent-gold': '#d9c93b',
+        'accent-green': '#3BD97A',
         'accent-pink': '#D93B9A',
       }
     },

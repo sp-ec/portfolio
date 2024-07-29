@@ -5,11 +5,13 @@ const NavBar = () => {
 
     const handleScroll = () => {
         setScrollHeight(window.scrollY)
-        if (scrollHeight < 560) {
+        if (scrollHeight < 598) {
             document.getElementById('navigation').classList.add('navAtTop')
+            document.getElementById('navigation').classList.remove('navMoving')
 
         } else {
             document.getElementById('navigation').classList.remove('navAtTop')
+            document.getElementById('navigation').classList.add('navMoving')
         }
     }
 
@@ -27,7 +29,7 @@ const NavBar = () => {
 
     return (
         <>
-            <div className='bg-zinc-700 w-screen left-0 fixed h-16 top-0 z-10 shadow-lg' id='navigation'>
+            <div className='backdrop-blur-xl bg-zinc-900 w-screen left-0 fixed h-16 top-0 z-10 shadow-lg' id='navigation'>
                 <nav>
 
                     <ul className='flex justify-center align-middle' id='nav-long'>
