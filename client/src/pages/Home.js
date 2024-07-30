@@ -38,13 +38,18 @@ function Home() {
       <NavBar />
       <div className='text-container'>
         <h2 className='p-8 mt-24'>Welcome</h2>
-        <p>My name is Noah, I'm a programmer and game developer. This is where I'll be posting about my projects and providing a window into my life.
-          Feel free to look around, and dont be afraid to contact me if you have any questions.</p>
+        <p>Hey there! My name is Noah. I'm a programmer, game developer and student. This is where I will be showcasing my projects and anything else I think is interesting. </p>
 
         <h2 className='p-8'>About Me</h2>
-        <p>I live near Washington D.C., USA and attend a local college. I'm currently pursuing a bachelor's in Computer Science with plans to get a master's in the future.</p>
-        <p className='mt-8'>I've used many languages, but I primarily use C# for game development and Javascript for web development.</p>
-        <p className='mt-8 mb-8'>When I'm not programming, I'm usually hanging out with my friends, travelling, practicing bass guitar or finding new indie games to play.</p>
+        <p>I live near Washington D.C., USA and am currently pursuing a Bachelor's degree in computer science.<br></br><br></br>
+
+          I'm always picking up new skills, but I'm most experienced developing with C#, Unity, React, Java and Javascript.
+          Outside of school, I've been focused mostly on web and game development.<br></br><br></br>
+
+          Besides programming, I also enjoy playing bass, traveling, chatting with my friends and finding new indie games to play.<br></br><br></br>
+
+          If you'd like to get in touch, you can email me <a className='hover-underline-animation text-accent-green' href='mailto:me@noahmartineau.com' target="_blank" rel="noopener noreferrer">here</a>.
+        </p>
         <span id='stats'> </span>
 
       </div>

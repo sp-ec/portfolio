@@ -10,6 +10,21 @@
   src: url('fonts/WorkSans/WorkSans-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Neon Glow';
+  src: url('fonts/Neon Glow.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fenwick';
+  src: url('fonts/Fenwick.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Abraham';
+  src: url('fonts/Abraham.otf') format('truetype');
+}
+
 #root {
   margin: 0 auto;
   padding: 1rem;
@@ -32,7 +47,7 @@ h1 {
   color: #ffffff;
   font-size: 10rem;
   font-family: 'Outfit';
-  font-weight: 600;
+  font-weight: 500;
   position: absolute;
   top: 50%;
   left: 50%;
