@@ -37,9 +37,6 @@ function Home() {
       <Header />
       <NavBar />
       <div className='text-container'>
-        <h2 className='p-8'>Welcome</h2>
-        <p>Hey there! My name is Noah. I'm a programmer, game developer and student. This is where I will be showcasing my projects and anything else I think is interesting. </p>
-
         <h2 className='p-8'>About Me</h2>
         <p>I live near Washington D.C., USA and am currently pursuing a Bachelor's degree in computer science.<br></br><br></br>
 
@@ -58,7 +55,7 @@ function Home() {
         <div className='text-container'>
 
           <div className={statsVisible ? 'scroll-fade-in' : 'scroll-fade-out'}>
-            <h2 className='p-8'>Stats</h2>
+            <h2 className='p-4'>Stats</h2>
           </div>
 
           <div className='flex row flex-wrap justify-around max-sm:-ml-8'>
