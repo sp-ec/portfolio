@@ -37,7 +37,7 @@ function Home() {
       <Header />
       <NavBar />
       <div className='text-container'>
-        <h2 className='p-8 mt-24'>Welcome</h2>
+        <h2 className='p-8'>Welcome</h2>
         <p>Hey there! My name is Noah. I'm a programmer, game developer and student. This is where I will be showcasing my projects and anything else I think is interesting. </p>
 
         <h2 className='p-8'>About Me</h2>
@@ -61,7 +61,7 @@ function Home() {
             <h2 className='p-8'>Stats</h2>
           </div>
 
-          <div className='flex row flex-wrap justify-around'>
+          <div className='flex row flex-wrap justify-around max-sm:-ml-8'>
 
             <div className='basis-1/4 flex-grow order-2'>
               <div className={statsVisible ? 'scroll-fade-in-delay-500' : 'scroll-fade-out'}>
@@ -90,9 +90,9 @@ function Home() {
         <h2 className='p-8'>Projects</h2>
 
         <div className={projects1Visible ? 'slide-left-in' : 'slide-left-out'} ref={projects1}>
-          <div className='flex flex-row flex-wrap mt-16 mb-8'>
+          <div className='flex flex-row flex-wrap mt-16 mb-16'>
 
-            <div className='basis-1/3 flex-grow  mr-8 ml-8 mb-16 flex justify-center min-w-96  h-fit shadow-2xl'>
+            <div className='basis-1/3 flex-grow flex-shrink-0 mr-8 ml-8 mb-16 flex justify-center min-w-64  h-fit shadow-2xl'>
               <a href='https://claireecho.itch.io/bit-keeper' target="_blank" rel="noopener noreferrer" className={projects1Visible ? 'project-box-shadow-on' : 'project-box-shadow-off'} ref={projects1}>
                 <AutoplayVideo
                   src="videos/BitKeeper.mp4"
@@ -106,7 +106,7 @@ function Home() {
               </a>
             </div>
 
-            <div className='basis-1/3 flex-grow mr-8 ml-8'>
+            <div className='basis-1/3 flex-grow mr-8 ml-8 sm:min-w-96'>
               <h3 className='pb-4'>Bit Keeper</h3>
               <p>
                 I made this small game along with a teammate for a 36-hour hackathon at my university.

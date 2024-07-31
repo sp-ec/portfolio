@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 @font-face {
   font-family: 'Work Sans';
@@ -43,15 +44,11 @@
   scroll-behavior: smooth;
 }
 
-h1 {
+.title-text {
   color: #ffffff;
-  font-size: 10rem;
-  font-family: 'Outfit';
+  font-family: 'Red Hat Display', sans-serif;
   font-weight: 500;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0);
+
 }
 
 h2 {
@@ -114,8 +111,8 @@ a:hover {
 }
 
 .navAtTop {
-  position: absolute;
-  top: 598px;
+  position: relative;
+  margin-left: -1rem;
   background-color: #18181B80;
   transition: background-color 0.25s;
 }
@@ -176,7 +173,7 @@ a:hover {
 }
 
 .project-box-shadow-on {
-  box-shadow: -10px -10px 0px 0px #3BD97A, -20px -20px 0px 0px #D93B9A;
+  box-shadow: -7px -7px 0px 0px #3BD97A, -14px -14px 0px 0px #D93B9A;
   transition: box-shadow 0.5s;
   transition-delay: 750ms;
 }
