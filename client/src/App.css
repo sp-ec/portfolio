@@ -223,8 +223,7 @@ p {
 }
 
 @media (min-width: 1080px) {
-  #dropdown-nav {
+  #nav-short {
     display: none;
-    margin-left: 0px;
   }
 }

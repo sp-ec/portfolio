@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { useState, useEffect } from 'react'
+import HamburgerIcon from '../icons/HamburgerIcon'
 
 const NavBar = () => {
 
@@ -44,6 +45,15 @@ const NavBar = () => {
                         <a href="#stats" className='hover-underline-animation'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Stats</li></a>
                         <a href="#projects" className='hover-underline-animation'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Projects</li></a>
                         <a href="#contact" className='hover-underline-animation'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Contact</li></a>
+                    </ul>
+
+                    <ul className='flex flex-row justify-end list-none h-16 place-items-center' id='nav-short'>
+                        <li className='flex flex-1 justify-self-start '>NOAH MARTINEAU</li>
+                        <li className='m-4'>
+                            <HamburgerIcon />
+                        </li>
+
+
                     </ul>
 
                 </nav>
