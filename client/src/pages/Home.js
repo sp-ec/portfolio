@@ -124,8 +124,8 @@ function Home() {
 
       <div className='dark-bg'>
         <h2 className='p-8' id='contact'>Contact</h2>
-        <div className='w-screen -ml-9 left-0 h-16'>
-          <ul className='flex justify-center align-middle'>
+        <div className='w-screen left-0 h-16 mb-8 -ml-6'>
+          <ul className='flex flex-row justify-center align-middle'>
             <a href='mailto:me@noahmartineau.com' target="_blank" rel="noopener noreferrer"><li className='pl-4 pr-4 p-2 mt-2 list-none hover-underline-animation'>
               <EmailIcon />
             </li></a>

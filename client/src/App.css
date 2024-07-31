@@ -166,8 +166,8 @@ a:hover {
 .dark-bg {
   background-color: #0000003f;
   margin-top: 4rem;
-  padding: 2rem;
-  padding-bottom: 4rem;
+  padding: 1rem;
+  padding-bottom: 1rem;
   width: 100vw;
   margin-left: -1rem;
 }
