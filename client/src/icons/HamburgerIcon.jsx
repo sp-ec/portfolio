@@ -9,7 +9,7 @@ function HamburgerIcon() {
             version="1.1"
             viewBox="0 0 12 12"
             xmlSpace="preserve"
-            opacity='0.8'
+            opacity="0.8"
         >
             <g fill="#ffffff">
                 <path d="M0.5 5.5H11.5V6.5H0.5z"></path>
