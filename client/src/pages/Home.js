@@ -122,7 +122,7 @@ function Home() {
 
       </div>
 
-      <div className='text-container flex flex-row webring w-1/2'>
+      <div className='text-container flex flex-row webring w-1/2 min-w-96'>
         <div className='webring-cluster flex flex-row justify-center flex-grow'>
           <a href="https://noahmartineau.com/" ><img src="images/button.png"></img></a>
           <img src="gifs/firefoxnow.gif"></img>
@@ -132,7 +132,6 @@ function Home() {
           <a href="https://www.kz-n.net/" ><img src="https://www.kz-n.net/public/88x31.png"></img></a>
           <img src="gifs/cssdif.gif"></img>
           <a href="https://discordapp.com/users/244925941036351489" ><img src="gifs/discord_now.gif"></img></a>
-          <img src="gifs/undercon.gif"></img>
           <a href="https://notepad-plus-plus.org/" ><img src="gifs/notepadpp3.gif"></img></a>
           <img src="gifs/hatemac_b.gif"></img>
         </div>

@@ -119,9 +119,44 @@ a:hover {
 
 .navMoving {
   transition: background-color 0.25s;
-  background-color: #18181b60;
+  background-color: #18181b80;
 }
 
+#nav-dropdown {
+  transition: all 0.5s;
+  background-color: #18181B;
+  transition-delay: 0.5s;
+}
+
+#nav-dropdown a {
+  transition: all 0.5s;
+  transform: translateX(-10vw);
+  opacity: 0;
+}
+
+#navigation {
+  transition: background-color 1s;
+  transition-delay: 0.9s;
+
+}
+
+.nav-darken {
+  transition: background-color 0.25s !important;
+  background-color: #18181B !important;
+}
+
+.nav-expanded {
+  transition: all 0.5s;
+  height: 256px;
+  transition-delay: 0s !important;
+}
+
+.nav-expanded a {
+  transition: all 0.5s;
+  opacity: 1 !important;
+  transition-duration: 0.5s !important;
+  transform: translateX(0vw) !important;
+}
 
 .scroll-fade-in {
   transition: opacity 0.5s ease-in, transform 0.5s ease-in-out;
@@ -225,6 +260,14 @@ p {
 @media (min-width: 1080px) {
   #nav-short {
     display: none;
+  }
+
+  #nav-dropdown {
+    display: none;
+  }
+
+  #navigation {
+    background-color: #18181B80 !important;
   }
 }
 
