@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './pages/Home';
+import Comments from './pages/Comments';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/comments" element={<Comments />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 

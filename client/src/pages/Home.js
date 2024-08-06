@@ -9,10 +9,12 @@ import Github from '../stats/Github.jsx'
 import NavBar from '../components/NavBar'
 import UnityIcon from '../icons/UnityIcon'
 import CSharpIcon from '../icons/CSharpIcon.jsx'
+import Footer from '../components/Footer'
 
 import { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { AutoplayVideo } from "@wethegit/react-autoplay-video"
+import Webring from '../components/Webring.jsx'
 
 
 function Home() {
@@ -122,20 +124,7 @@ function Home() {
 
       </div>
 
-      <div className='text-container flex flex-row webring w-1/2 min-w-96'>
-        <div className='webring-cluster flex flex-row justify-center flex-grow'>
-          <a href="https://noahmartineau.com/" ><img src="images/button.png"></img></a>
-          <img src="gifs/firefoxnow.gif"></img>
-          <a href="https://fl1nt.dev" ><img src="https://fl1nt.dev/images/mybutton.gif"></img></a>
-          <a href="https://store.steampowered.com/" ><img src="gifs/steam.gif"></img></a>
-          <a href="https://cdn.fl1nt.dev" ><img src="https://fl1nt.dev/images/buttons/cdn.gif"></img></a>
-          <a href="https://www.kz-n.net/" ><img src="https://www.kz-n.net/public/88x31.png"></img></a>
-          <img src="gifs/cssdif.gif"></img>
-          <a href="https://discordapp.com/users/244925941036351489" ><img src="gifs/discord_now.gif"></img></a>
-          <a href="https://notepad-plus-plus.org/" ><img src="gifs/notepadpp3.gif"></img></a>
-          <img src="gifs/hatemac_b.gif"></img>
-        </div>
-      </div >
+      <Webring />
 
       <div className='dark-bg'>
         <h2 className='p-8' id='contact'>Contact</h2>
@@ -153,9 +142,7 @@ function Home() {
           </ul>
         </div>
       </div>
-      <div className='text-container'>
-        <p className='text-sm text-center mt-8'>© 2024 noahmartineau.com. All rights reserved.</p>
-      </div>
+      <Footer />
     </>
   )
 }

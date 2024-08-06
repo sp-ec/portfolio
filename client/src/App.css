@@ -37,6 +37,7 @@
   line-height: 1.5;
   font-weight: 400;
   font-size: 1.1rem;
+  min-height: 100vh;
 
   color: rgba(255, 255, 255, 0.75);
   background-color: #27272a;
@@ -113,6 +114,7 @@ a:hover {
 .navAtTop {
   position: relative;
   margin-left: -1rem;
+  margin-top: -1rem;
   background-color: #18181B80;
   transition: background-color 0.25s;
 }
@@ -129,7 +131,7 @@ a:hover {
 }
 
 #nav-dropdown a {
-  transition: all 0.5s;
+  transition: transform 0.5s, opacity 0.25s;
   transform: translateX(-10vw);
   opacity: 0;
 }
@@ -147,7 +149,7 @@ a:hover {
 
 .nav-expanded {
   transition: all 0.5s;
-  height: 256px;
+  height: 320px;
   transition-delay: 0s !important;
 }
 
@@ -282,49 +284,12 @@ p {
 }
 
 .webring-cluster {
-  position: relative;
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  animation: scroll-left 20s linear infinite;
+  position: absolute;
+  margin-top: -15px;
 }
 
 .webring-cluster img {
   margin-right: 10px;
   min-width: 88px;
   min-height: 31px;
-}
-
-@-moz-keyframes scroll-left {
-  0% {
-    -moz-transform: translateX(100%);
-  }
-
-  100% {
-    -moz-transform: translateX(-100%);
-  }
-}
-
-@-webkit-keyframes scroll-left {
-  0% {
-    -webkit-transform: translateX(100%);
-  }
-
-  100% {
-    -webkit-transform: translateX(-100%);
-  }
-}
-
-@keyframes scroll-left {
-  0% {
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-
-  100% {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
 }

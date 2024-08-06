@@ -1,6 +1,16 @@
 const express = require('express')
+const mysql = require('mysql')
+const cors = require('cors')
 
 const app = express()
+app.use(cors())
+
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'portfolio'
+})
 
 const LASTFM_API_KEY = require('./keys.json').LASTFM_API_KEY;
 const GITHUB_TOKEN = require('./keys.json').GITHUB_TOKEN;
@@ -9,6 +19,20 @@ let forecastData;
 let githubUserData;
 let githubReposData;
 let musicData;
+
+app.get("/api/comments", (req, res) => {
+    const { id } = req.query;
+    const { limit } = req.query;
+    const sqlSelect = `SELECT * FROM comments WHERE id >= ${id != null ? id : 0} ORDER BY id DESC ${limit != null ? 'LIMIT ' + limit : ''}`;
+    db.query(sqlSelect, (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Internal Server Error");
+        } else {
+            res.send(result);
+        }
+    });
+});
 
 app.get("/music/lastplayed", (req, res) => {
     res.json(musicData)
