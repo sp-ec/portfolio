@@ -12,9 +12,6 @@ const db = mysql.createConnection({
     database: 'portfolio'
 })
 
-const LASTFM_API_KEY = require('./keys.json').LASTFM_API_KEY;
-const GITHUB_TOKEN = require('./keys.json').GITHUB_TOKEN;
-
 let forecastData;
 let githubUserData;
 let githubReposData;
@@ -58,7 +55,7 @@ app.listen(5000, () => {
 const fetchLastPlayed = async () => {
     console.log('Fetching data from Last.fm...')
     const response = await fetch(
-        'https://ws.audioscrobbler.com/2.0/?api_key=' + LASTFM_API_KEY + '&method=User.getrecenttracks&user=noahmartineau&format=json&limit=1'
+        'https://ws.audioscrobbler.com/2.0/?api_key=${{ LASTFM_API_KEY }}&method=User.getrecenttracks&user=noahmartineau&format=json&limit=1'
     )
     const data = await response.json()
     console.log('Data fetched:', data)
@@ -81,7 +78,7 @@ const fetchGithubUser = async () => {
         'https://api.github.com/users/sp-ec', {
         headers: {
             'Accept': 'application/vnd.github+json',
-            'Authorization': 'Bearer ' + GITHUB_TOKEN,
+            'Authorization': 'Bearer ${{ GITHUB_TOKEN }}',
             'X-GitHub-Api-Version': '2022-11-28'
         }
     }
@@ -97,7 +94,7 @@ const fetchGithubRepos = async () => {
         'https://api.github.com/users/sp-ec/repos', {
         headers: {
             'Accept': 'application/vnd.github+json',
-            'Authorization': 'Bearer ' + GITHUB_TOKEN,
+            'Authorization': 'Bearer ${{ GITHUB_TOKEN }}',
             'X-GitHub-Api-Version': '2022-11-28'
         }
     }
