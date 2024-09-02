@@ -1,6 +1,5 @@
 import React from 'react'
-import HeaderBG from './HeaderBG'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 
@@ -23,7 +22,7 @@ export default function Header() {
 
                 <div className='basis-1/2 flex flex-row flex-grow z-10 flex-shrink m-12 max-sm:mt-6 max-sm:max-w-none max-sm:max-h-none md:max-w-64 md:max-h-64 md:min-h-64 sm:max-w-48 sm:min-h-48 sm:max-h-48 max-sm:bg-none'>
                     <div className={titleVisible ? 'transition-opacity duration-1000 opacity-100 ease-in-out delay-500' : 'duration-1000 opacity-0'}>
-                        <img src={require('../photos/me_500x500.png')} className={titleVisible ? 'project-box-shadow-on' : 'project-box-shadow-off'}></img>
+                        <img src={require('../photos/me_500x500.png')} alt='Me in Athens' className={titleVisible ? 'project-box-shadow-on' : 'project-box-shadow-off'}></img>
                     </div>
                 </div>
                 <div className='basis-1/5 flex-grow max-w-2xl flex flex-col max-sm:mb-4 max-sm:text-4xl max-sm:ml-8 sm:text-2xl md:text-4xl lg:text-7xl mr-8 sm:mt-8'>

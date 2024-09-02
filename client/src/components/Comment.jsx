@@ -1,6 +1,4 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import { Children } from 'react'
+import React from 'react'
 
 const Comment = ({ children, name, date }) => {
     return (

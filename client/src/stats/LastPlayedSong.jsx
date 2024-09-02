@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const LastPlayedSong = () => {
 
@@ -32,12 +32,12 @@ const LastPlayedSong = () => {
                     </div>
                     {(typeof song.date == 'undefined') ? (
                         <div className='flex-row flex place-items-center mt-5'>
-                            <img src={require('../photos/vinyl.png')} className='w-5 animate-spin'></img>
+                            <img src={require('../photos/vinyl.png')} a="spinning vinyl" className='w-5 animate-spin'></img>
                             <p className='text-xs opacity-40 ml-2'>Currently Listening</p>
                         </div>
                     ) : (
                         <div className='flex-row flex place-items-center mt-5'>
-                            <img src={require('../photos/vinyl.png')} className='w-5'></img>
+                            <img src={require('../photos/vinyl.png')} a="spinning vinyl" className='w-5'></img>
                             {(seconds < 3600) ? (
                                 <p className='text-xs opacity-40 ml-2'>Played {Math.floor(seconds / 60)} minute(s) ago</p>
                             ) : (

@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
-import { useEffect, useState } from 'react';
+import React from 'react'
+import { useEffect, useRef } from 'react';
 
 const Webring = () => {
 
+    const cluster1Ref = useRef(null);
+    const cluster2Ref = useRef(null);
+    const idRef = useRef(null);
+
     let cluster1;
     let cluster2
-    let id = null;
     let pos1 = 0;
     let pos2 = -500;
 
@@ -40,11 +43,11 @@ const Webring = () => {
 
     useEffect(() => {
 
-        cluster1 = document.getElementById('cluster1');
-        cluster2 = document.getElementById('cluster2');
+        cluster1Ref.current = document.getElementById('cluster1');
+        cluster2Ref.current = document.getElementById('cluster2');
 
         clearInterval(id);
-        id = setInterval(frame, 10);
+        idRef.current = setInterval(frame, 10);
 
     }, [])
 
@@ -53,19 +56,19 @@ const Webring = () => {
         <div onMouseEnter={() => pauseAnimation()} onMouseLeave={() => unpauseAnimation()}>
             <div className='text-container flex flex-row webring w-1/2 min-w-96'>
                 <div id='cluster1' className='webring-cluster flex flex-row flex-grow'>
-                    <a href="https://noahmartineau.com/"   ><img src="images/button.png"></img></a>
-                    <img src="gifs/firefoxnow.gif"></img>
-                    <a href="https://fl1nt.dev" ><img src="https://fl1nt.dev/images/mybutton.gif"></img></a>
-                    <a href="https://store.steampowered.com/" ><img src="gifs/steam.gif"></img></a>
-                    <a href="https://cdn.fl1nt.dev" ><img src="https://fl1nt.dev/images/buttons/cdn.gif"></img></a>
-                    <img src="gifs/cssdif.gif"></img>
+                    <a href="https://noahmartineau.com/"   ><img src="images/button.png" alt='webring button'></img></a>
+                    <img src="gifs/firefoxnow.gif" alt='webring button'></img>
+                    <a href="https://fl1nt.dev" ><img src="https://fl1nt.dev/images/mybutton.gif" alt='webring button'></img></a>
+                    <a href="https://store.steampowered.com/" ><img src="gifs/steam.gif" alt='webring button'></img></a>
+                    <a href="https://cdn.fl1nt.dev" ><img src="https://fl1nt.dev/images/buttons/cdn.gif" alt='webring button'></img></a>
+                    <img src="gifs/cssdif.gif" alt='webring button'></img>
                 </div>
-                <div id='cluster2' className='webring-cluster flex flex-row flex-grow'>
-                    <a href="https://armcord.app/" ><img src="gifs/armcord.gif"></img></a>
-                    <a href="https://discordapp.com/users/244925941036351489" ><img src="gifs/discord_now.gif"></img></a>
-                    <a href="https://notepad-plus-plus.org/" ><img src="gifs/notepadpp3.gif"></img></a>
-                    <a href="https://thebeemc.carrd.co/" ><img src="gifs/thebee.gif"></img></a>
-                    <img src="gifs/hatemac_b.gif"></img>
+                <div id='cluster2' className='webring-cluster flex flex-row flex-grow' alt='webring button'>
+                    <a href="https://armcord.app/" ><img src="gifs/armcord.gif" alt='webring button'></img></a>
+                    <a href="https://discordapp.com/users/244925941036351489" ><img src="gifs/discord_now.gif" alt='webring button'></img></a>
+                    <a href="https://notepad-plus-plus.org/" ><img src="gifs/notepadpp3.gif alt='webring button'"></img></a>
+                    <a href="https://thebeemc.carrd.co/" ><img src="gifs/thebee.gif" alt='webring button'></img></a>
+                    <img src="gifs/hatemac_b.gif" alt='webring button'></img>
                 </div>
             </div >
         </div>

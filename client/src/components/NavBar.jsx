@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { useState, useEffect } from 'react'
 import HamburgerIcon from '../icons/HamburgerIcon'
 
