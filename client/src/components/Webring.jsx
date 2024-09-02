@@ -3,13 +3,11 @@ import { useEffect, useState } from 'react';
 
 const Webring = () => {
 
-    const [isHovered, setIsHovered] = useState(false);
-
     let cluster1;
     let cluster2
     let id = null;
     let pos1 = 0;
-    let pos2 = -590;
+    let pos2 = -500;
 
     let paused = false;
 
@@ -68,7 +66,6 @@ const Webring = () => {
                     <a href="https://notepad-plus-plus.org/" ><img src="gifs/notepadpp3.gif"></img></a>
                     <a href="https://thebeemc.carrd.co/" ><img src="gifs/thebee.gif"></img></a>
                     <img src="gifs/hatemac_b.gif"></img>
-                    <a href="https://www.kz-n.net/" ><img src="https://www.kz-n.net/public/88x31.png"></img></a>
                 </div>
             </div >
         </div>

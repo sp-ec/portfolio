@@ -149,7 +149,7 @@ a:hover {
 
 .nav-expanded {
   transition: all 0.5s;
-  height: 320px;
+  height: 250px;
   transition-delay: 0s !important;
 }
 

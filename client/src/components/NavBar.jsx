@@ -45,7 +45,6 @@ const NavBar = () => {
                         <a href="/#stats" className='hover-underline-animation'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Stats</li></a>
                         <a href="/#projects" className='hover-underline-animation'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Projects</li></a>
                         <a href="/#contact" className='hover-underline-animation'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Contact</li></a>
-                        <a href="/comments" className='hover-underline-animation'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Comments</li></a>
                     </ul>
 
                     <ul className='flex flex-row justify-end list-none h-16 place-items-center' id='nav-short'>
@@ -71,7 +70,6 @@ const NavBar = () => {
                             <a href="/#stats" className='hover-underline-animation !delay-[100ms] text-accent-pink'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Stats</li></a>
                             <a href="/#projects" className='hover-underline-animation !delay-[200ms] text-accent-green'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Projects</li></a>
                             <a href="/#contact" className='hover-underline-animation !delay-[300ms] text-accent-pink'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Contact</li></a>
-                            <a href="/comments" className='hover-underline-animation !delay-[400ms] text-accent-green'><li className='pl-8 pr-8 p-2 mt-2 list-none headerLink'>Comments</li></a>
                         </ul>
                     </div>
 

@@ -57,7 +57,7 @@ function Comments() {
         ))}
       </div>
       <div className='flex flex-row justify-center'>
-        {limit < length ? <button className='bg-accent-green hover:bg-accent-green-dark text-neutral-900 font-bold py-2 px-4 rounded m-8' onClick={() => { setLimit(limit + 5) }}>Load More</button> : null}
+        {limit < length ? <button className='bg-accent-green hover:bg-accent-green-dark text-neutral-900 font-bold py-2 px-4 rounded m-8' onClick={() => { setLimit(limit + 5); setStartID(startID + 5) }}>Load More</button> : null}
       </div>
 
       <Footer />

@@ -11,7 +11,6 @@ import UnityIcon from '../icons/UnityIcon'
 import CSharpIcon from '../icons/CSharpIcon.jsx'
 import Footer from '../components/Footer'
 
-import { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { AutoplayVideo } from "@wethegit/react-autoplay-video"
 import Webring from '../components/Webring.jsx'
@@ -37,6 +36,7 @@ function Home() {
   return (
     <>
       <Header />
+      <div className='mt-4'></div>
       <NavBar />
       <div className='text-container'>
         <h2 className='p-8'>About Me</h2>
@@ -45,7 +45,7 @@ function Home() {
           I'm always picking up new skills, but I'm most experienced developing with C#, Unity, React, Java and Javascript.
           Outside of school, I've been focused mostly on web and game development.<br></br><br></br>
 
-          Besides programming, I also enjoy playing bass, traveling, chatting with my friends and finding new indie games to play.<br></br><br></br>
+          Besides programming, I also enjoy playing bass, traveling, chatting with my friends and finding new indie games to play. I am also very passionate about anything science and will spend hours falling down rabbit holes on wikipedia.<br></br><br></br>
 
           If you'd like to get in touch, you can email me <a className='hover-underline-animation text-accent-green' href='mailto:me@noahmartineau.com' target="_blank" rel="noopener noreferrer">here</a>.
         </p>
