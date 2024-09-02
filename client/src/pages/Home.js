@@ -13,8 +13,6 @@ import Footer from '../components/Footer'
 
 import { useInView } from 'react-intersection-observer'
 import { AutoplayVideo } from "@wethegit/react-autoplay-video"
-import Webring from '../components/Webring.jsx'
-
 
 function Home() {
 
@@ -123,8 +121,6 @@ function Home() {
         <p className='text-center text-lg mb-8'>Curious about how I made this website? It was made using NodeJS, React and Tailwind CSS.</p>
 
       </div>
-
-      <Webring />
 
       <div className='dark-bg'>
         <h2 className='p-8' id='contact'>Contact</h2>
