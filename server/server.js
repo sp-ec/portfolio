@@ -3,7 +3,16 @@ const mysql = require('mysql')
 //const cors = require('cors')
 
 const app = express()
-//app.use(cors())
+
+app.use((req, res, next) => {
+  const allowedHosts = ['client-production-1986.up.railway.app', 'localhost'];
+  const host = req.headers.host;
+  if (allowedHosts.includes(host)) {
+    next();
+  } else {
+    res.status(403).send('Invalid Host');
+  }
+});
 
 const db = mysql.createConnection({
     host: 'localhost',
@@ -48,9 +57,10 @@ app.get("/github/repos", (req, res) => {
     res.json(githubReposData)
 })
 
-app.listen(5000, () => {
-    console.log("Server is running on port 5000")
-})
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 
 const fetchLastPlayed = async () => {
     console.log('Fetching data from Last.fm...')
