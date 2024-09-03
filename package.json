@@ -2,7 +2,7 @@
     "name": "spec-disaster",
     "version": "1.0.0",
     "scripts": {
-      "start": "cd server && npm start",
+      "start": "cd client && npm run build && cd ../server && npm start",
       "build": "cd client && npm install && npm run build && cd ../server && npm install"
     }
   }
