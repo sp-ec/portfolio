@@ -13,6 +13,10 @@ const Github = () => {
                 setUser(data)
                 console.log("User data fetched:", data)
             })
+        fetch('/github/user')
+            .then(response => {
+                console.log("Github response: " + response);
+            })
         fetch('/github/repos')
             .then(response => response.json())
             .then(data => {
