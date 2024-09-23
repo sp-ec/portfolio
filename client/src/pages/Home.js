@@ -45,7 +45,7 @@ function Home() {
 
           Besides programming, I also enjoy playing bass, traveling, chatting with my friends and finding new indie games to play. I am also very passionate about anything science and will spend hours falling down rabbit holes on wikipedia.<br></br><br></br>
 
-          If you'd like to get in touch, you can email me <a className='hover-underline-animation text-accent-green' href='mailto:me@noahmartineau.com' target="_blank" rel="noopener noreferrer">here</a>.
+          If you'd like to get in touch, you can email me <a className='hover-underline-animation text-accent-green' href='mailto:noahmartineau8@gmail.com' target="_blank" rel="noopener noreferrer">here</a>.
         </p>
         <span id='stats'> </span>
 
@@ -126,7 +126,7 @@ function Home() {
         <h2 className='p-8' id='contact'>Contact</h2>
         <div className='w-screen left-0 h-16 mb-8 -ml-6'>
           <ul className='flex flex-row justify-center align-middle'>
-            <a href='mailto:me@noahmartineau.com' target="_blank" rel="noopener noreferrer"><li className='pl-4 pr-4 p-2 mt-2 list-none hover-underline-animation'>
+            <a href='mailto:noahmartineau8@gmail.com' target="_blank" rel="noopener noreferrer"><li className='pl-4 pr-4 p-2 mt-2 list-none hover-underline-animation'>
               <EmailIcon />
             </li></a>
             <a href='https://github.com/sp-ec' target="_blank" rel="noopener noreferrer"><li className='pl-4 pr-4 p-2 mt-2 list-none hover-underline-animation'>
