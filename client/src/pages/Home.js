@@ -95,6 +95,7 @@ function Home() {
                   src="videos/BitKeeper.mp4"
                   posterImg="images/bitkeeper-fallback.png"
                   prefersReducedMotion={prefersReducedMotion}
+                  lazyLoadRootMargin="0px 0px 1000px 0px"
                   style={{ '--aspect-ratio': 'calc((9 / 16) * 100%)' }}
                   renderReducedMotionFallback={() => (
                     <img src="bitkeeper-fallback.png" alt="Gameplay screenshot." />
