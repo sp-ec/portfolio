@@ -93,7 +93,7 @@ function Home() {
               <a href='https://claireecho.itch.io/bit-keeper' target="_blank" rel="noopener noreferrer" className={projects1Visible ? 'project-box-shadow-on' : 'project-box-shadow-off'} ref={projects1}>
                 <AutoplayVideo
                   src="videos/BitKeeper.mp4"
-                  posterImg="bitkeeper-fallback.png"
+                  posterImg="images/bitkeeper-fallback.png"
                   prefersReducedMotion={prefersReducedMotion}
                   style={{ '--aspect-ratio': 'calc((9 / 16) * 100%)' }}
                   renderReducedMotionFallback={() => (

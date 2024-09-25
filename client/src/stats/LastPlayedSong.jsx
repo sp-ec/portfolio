@@ -10,7 +10,7 @@ const LastPlayedSong = () => {
 
     useEffect(() => {
         console.log('Fetching data from backend...')
-        fetch('/music/lastplayed')
+        fetch('http://localhost:5000/music/lastplayed')
             .then(response => response.json())
             .then(data => {
                 setSong(data.recenttracks.track[0])

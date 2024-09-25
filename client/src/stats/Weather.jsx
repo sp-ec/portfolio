@@ -8,7 +8,7 @@ const Weather = () => {
 
     useEffect(() => {
         console.log('Fetching data from backend...')
-        fetch('/weather/forecast')
+        fetch('http://localhost:5000/weather/forecast')
             .then(response => response.json())
             .then(data => {
                 console.log('Data fetched:', data)

@@ -1,44 +1,28 @@
 const express = require('express')
-const mysql = require('mysql')
-//const cors = require('cors')
+const cors = require('cors');
 
 const app = express()
+app.use(cors());
+
+
 
 app.use((req, res, next) => {
-    const allowedHosts = ['client-production-1986.up.railway.app', 'localhost'];
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    const allowedHosts = ['client-production-1986.up.railway.app', 'localhost', 'noahmartineau.com'];
     const host = req.headers.host;
     if (allowedHosts.includes(host)) {
         next();
     } else {
+        console.log('Invalid Host');
         res.status(403).send('Invalid Host');
     }
 });
-
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'portfolio'
-})
 
 let forecastData;
 let githubUserData;
 let githubReposData;
 let musicData;
-
-app.get("/api/comments", (req, res) => {
-    const { id } = req.query;
-    const { limit } = req.query;
-    const sqlSelect = `SELECT * FROM comments WHERE id >= ${id != null ? id : 0} ORDER BY id DESC ${limit != null ? 'LIMIT ' + limit : ''}`;
-    db.query(sqlSelect, (err, result) => {
-        if (err) {
-            console.log(err);
-            res.status(500).send("Internal Server Error");
-        } else {
-            res.send(result);
-        }
-    });
-});
 
 app.get("/music/lastplayed", (req, res) => {
     res.json(musicData)
