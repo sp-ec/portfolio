@@ -1,14 +1,14 @@
 const express = require('express')
-//const cors = require('cors');
+const cors = require('cors');
 
 const app = express()
-//app.use(cors());
+app.use(cors());
 
 
 
 app.use((req, res, next) => {
-    //res.header("Access-Control-Allow-Origin", "*");
-    //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     const allowedHosts = ['client-production-1986.up.railway.app', 'localhost', 'noahmartineau.com', 'server-production-aed0.up.railway.app'];
     const host = req.headers.host;
     if (allowedHosts.includes(host)) {
