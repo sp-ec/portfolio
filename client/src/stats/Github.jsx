@@ -7,13 +7,13 @@ const Github = () => {
 
     useEffect(() => {
         console.log('Fetching data from backend...')
-        fetch('http://noahmartineau.com/github/user')
+        fetch('https://server-production-aed0.up.railway.app/github/user')
             .then(response => response.json())
             .then(data => {
                 setUser(data)
                 console.log("User data fetched:", data)
             })
-        fetch('http://noahmartineau.com/github/repos')
+        fetch('https://server-production-aed0.up.railway.app/github/repos')
             .then(response => response.json())
             .then(data => {
                 setRepos(data)

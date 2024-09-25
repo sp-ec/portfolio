@@ -10,7 +10,7 @@ const LastPlayedSong = () => {
 
     useEffect(() => {
         console.log('Fetching data from backend...')
-        fetch('http://noahmartineau.com/music/lastplayed')
+        fetch('https://server-production-aed0.up.railway.app/music/lastplayed')
             .then(response => response.json())
             .then(data => {
                 setSong(data.recenttracks.track[0])

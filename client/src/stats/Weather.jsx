@@ -8,7 +8,7 @@ const Weather = () => {
 
     useEffect(() => {
         console.log('Fetching data from backend...')
-        fetch('http://noahmartineau.com/weather/forecast')
+        fetch('https://server-production-aed0.up.railway.app/weather/forecast')
             .then(response => response.json())
             .then(data => {
                 console.log('Data fetched:', data)

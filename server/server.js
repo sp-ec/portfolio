@@ -9,13 +9,13 @@ const app = express()
 app.use((req, res, next) => {
     //res.header("Access-Control-Allow-Origin", "*");
     //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    const allowedHosts = ['client-production-1986.up.railway.app', 'localhost', 'noahmartineau.com'];
+    const allowedHosts = ['client-production-1986.up.railway.app', 'localhost', 'noahmartineau.com', 'server-production-aed0.up.railway.app'];
     const host = req.headers.host;
     if (allowedHosts.includes(host)) {
         next();
     } else {
         console.log('Invalid Host');
-        res.status(403).send('Invalid Host');
+        res.status(403).send('Invalid Host: ' + host);
     }
 });
 
