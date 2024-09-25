@@ -7,8 +7,8 @@ const app = express()
 
 
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    //res.header("Access-Control-Allow-Origin", "*");
+    //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     const allowedHosts = ['client-production-1986.up.railway.app', 'localhost', 'noahmartineau.com'];
     const host = req.headers.host;
     if (allowedHosts.includes(host)) {
