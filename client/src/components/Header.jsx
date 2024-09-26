@@ -33,7 +33,7 @@ export default function Header() {
 
                     <div className={titleVisible ? 'transition-all duration-1000 opacity-100 ease-in-out delay-700' : 'duration-1000 opacity-0'}>
                         <p className='mt-6 leading-8 sm:text-base md:text-xl'>
-                            Hey there! My name is Noah. I'm a programmer, game developer and student.
+                            Hey there! My name is Noah. I'm a software developer and student.
                             This is where I will be showcasing my projects and anything else I think is interesting.
                         </p>
                     </div>

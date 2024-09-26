@@ -41,7 +41,7 @@ function Home() {
         <p>I live near Washington D.C., USA and am currently pursuing a Bachelor's degree in computer science.<br></br><br></br>
 
           I'm always picking up new skills, but I'm most experienced developing with C#, Unity, React, Java and Javascript.
-          Outside of school, I've been focused mostly on web and game development.<br></br><br></br>
+          Outside of school, I've been focused mostly on furthering my skills with web development.<br></br><br></br>
 
           Besides programming, I also enjoy playing bass, traveling, chatting with my friends and finding new indie games to play. I am also very passionate about anything science and will spend hours falling down rabbit holes on wikipedia.<br></br><br></br>
 

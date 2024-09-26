@@ -5,6 +5,7 @@ import Comments from './pages/Comments';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import { Navigate } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +13,6 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/comments" element={<Comments />} />
       </Routes>
     </Router>
   </React.StrictMode>
