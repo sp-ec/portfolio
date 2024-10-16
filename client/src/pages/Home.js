@@ -10,13 +10,22 @@ import NavBar from '../components/NavBar'
 import UnityIcon from '../icons/UnityIcon'
 import CSharpIcon from '../icons/CSharpIcon.jsx'
 import Footer from '../components/Footer'
+import NodeIcon from '../icons/NodeIcon.jsx'
 
 import { useInView } from 'react-intersection-observer'
 import { AutoplayVideo } from "@wethegit/react-autoplay-video"
+import ReactIcon from '../icons/ReactIcon.jsx'
+import DatabaseIcon from '../icons/DatabaseIcon.jsx'
+import TailwindIcon from '../icons/TailwindIcon.jsx'
 
 function Home() {
 
   const { ref: projects1, inView: projects1Visible } = useInView({
+    threshold: 0.35,
+    triggerOnce: true
+  });
+
+  const { ref: projects2, inView: projects2Visible } = useInView({
     threshold: 0.35,
     triggerOnce: true
   });
@@ -40,7 +49,7 @@ function Home() {
         <h2 className='p-8'>About Me</h2>
         <p>I live near Washington D.C., USA and am currently pursuing a Bachelor's degree in computer science.<br></br><br></br>
 
-          I'm always picking up new skills, but I'm most experienced developing with C#, Unity, React, Java and Javascript.
+          I'm always picking up new skills, but I'm most experienced developing with React, Java Javascript, C# and NodeJS.
           Outside of school, I've been focused mostly on furthering my skills with web development.<br></br><br></br>
 
           Besides programming, I also enjoy playing bass, traveling, chatting with my friends and finding new indie games to play. I am also very passionate about anything science and will spend hours falling down rabbit holes on wikipedia.<br></br><br></br>
@@ -87,10 +96,36 @@ function Home() {
         <h2 className='p-8'>Projects</h2>
 
         <div className={projects1Visible ? 'slide-left-in' : 'slide-left-out'} ref={projects1}>
+          <div className='flex flex-row-reverse flex-wrap mt-16 mb-16'>
+
+            <div className='basis-1/3 flex-grow flex-shrink-0 mr-8 ml-8 mb-16 flex justify-center min-w-64  h-fit shadow-2xl'>
+              <div className={projects1Visible ? 'project-box-shadow-on' : 'project-box-shadow-off'} ref={projects1}>
+                <img src='images/statusnow.png' alt='Screenshot of the home page' />
+              </div>
+            </div>
+
+            <div className='basis-1/3 flex-grow mr-8 ml-8 sm:min-w-96'>
+              <h3 className='pb-4'>Status Now</h3>
+              <p>
+                A full-stack web app I made for a hackathon at my university.
+                It allows co-workers to share their current status with each other and coordinate across multiple locations.
+              </p>
+              <div className='mt-4 flex flex-row justify-between w-36'>
+                <ReactIcon />
+                <NodeIcon />
+                <DatabaseIcon />
+                <TailwindIcon />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className={projects2Visible ? 'slide-left-in' : 'slide-left-out'} ref={projects2}>
           <div className='flex flex-row flex-wrap mt-16 mb-16'>
 
             <div className='basis-1/3 flex-grow flex-shrink-0 mr-8 ml-8 mb-16 flex justify-center min-w-64  h-fit shadow-2xl'>
-              <a href='https://claireecho.itch.io/bit-keeper' target="_blank" rel="noopener noreferrer" className={projects1Visible ? 'project-box-shadow-on' : 'project-box-shadow-off'} ref={projects1}>
+              <a href='https://claireecho.itch.io/bit-keeper' target="_blank" rel="noopener noreferrer" className={projects2Visible ? 'project-box-shadow-on' : 'project-box-shadow-off'} ref={projects2}>
                 <AutoplayVideo
                   src="videos/BitKeeper.mp4"
                   posterImg="images/bitkeeper-fallback.png"
